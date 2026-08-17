@@ -87,4 +87,4 @@ npm run check
 
 Set hosted runtime values through the Sites environment rather than committing secrets.
 
-The repository also includes a separate GitHub Pages workflow. That build uses a static export with `NEXT_PUBLIC_BASE_PATH=/portfolio`, so navigation, images, metadata assets, and `resume.pdf` resolve correctly from `https://madadi-dev.github.io/portfolio/`. The Sites build remains base-path-free and continues to use Vinext.
+The repository also includes a separate GitHub Pages workflow. That build uses a static export with `NEXT_PUBLIC_BASE_PATH=/portfolio`, so navigation, images, metadata assets, and `resume.pdf` resolve correctly from `https://jafarxdev.github.io/portfolio/`. The Sites build remains base-path-free and continues to use Vinext.
