@@ -10,6 +10,16 @@ const architecturePrinciples = [
   "Secure, well-documented APIs and integrations",
   "Performance measured at the database and application layers",
   "Automated testing and delivery practices that reduce risk",
+  "Observability that makes production behavior easy to understand",
+  "Resilient workflows that handle failures and recover gracefully",
+  "Authentication, authorization, and data protection by design",
+  "AI integrations grounded in clear evaluation and responsible use",
+  "Scalable designs that support growth without unnecessary complexity",
+  "Reliable data models, migrations, and database performance",
+  "Clear API contracts that simplify frontend and service integration",
+  "Event-driven patterns for responsive, decoupled business workflows",
+  "Accessible interfaces that make complex tasks easier to complete",
+  "Documentation that helps teams operate, extend, and support systems",
 ] as const;
 
 export default function HomePage() {
@@ -17,13 +27,13 @@ export default function HomePage() {
     <>
       <section className="site-container flex min-h-screen items-center py-24">
         <div className="max-w-4xl space-y-8">
-          <div className="badge"><Sparkles aria-hidden="true" size={14} /> Senior Software Engineer & Software Architect</div>
+          <div className="badge"><Sparkles aria-hidden="true" size={14} /> Software Developer & AI Software Engineer</div>
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">
-            Building dependable software systems and{" "}
-            <span className="gradient-text">scalable enterprise platforms</span>
+            Building scalable software and{" "}
+            <span className="gradient-text">intelligent AI solutions</span>
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-            I&apos;m Jafar Madadi, a Senior Software Engineer, Software Architect, and Full-Stack Engineer. I design scalable applications, REST APIs, and workflow automation for telecom, banking, and business operations.
+            I&apos;m Jafar Madadi, a Software Developer and AI Software Engineer with 5+ years of experience building enterprise software across telecommunications, banking, and business operations. I specialize in full-stack development, backend engineering, system integration, workflow automation, and AI application integration.
           </p>
 
           <div className="grid max-w-md grid-cols-2 gap-4 pt-2">

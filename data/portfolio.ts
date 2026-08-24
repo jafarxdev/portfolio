@@ -23,9 +23,9 @@ export const siteConfig = {
   name: "Jafar Madadi",
   shortName: "JM",
   url: "https://jafar-madadi-portfolio.jafar-madadi2026.chatgpt.site/",
-  title: "Jafar Madadi | Senior Software Engineer & Software Architect",
+  title: "Jafar Madadi | Software Developer & AI Software Engineer",
   description:
-    "Senior Software Engineer and Software Architect designing scalable enterprise platforms, APIs, and workflow automation for telecom, banking, and business operations.",
+    "Software Developer and AI Software Engineer with 5+ years of experience building enterprise software, scalable APIs, microservices, and AI-integrated applications.",
   locale: "en_US",
 } as const;
 
@@ -39,8 +39,8 @@ export const navigation = [
 export const profile = {
   name: siteConfig.name,
   initials: ["J", "M"] as const,
-  title: "Senior Software Engineer, Software Architect & Full-Stack Engineer",
-  tagline: "software engineer & architect",
+  title: "Software Developer & AI Software Engineer",
+  tagline: "software developer & AI engineer",
   email: "jafar.madadi2026@gmail.com",
   phone: "+93 744 646 063",
   location: "Kabul, Afghanistan",
@@ -56,10 +56,10 @@ export const stats = [
 ] as const satisfies readonly Stat[];
 
 export const keyAreas = [
-  { label: "System Architecture", icon: Network },
+  { label: "AI Engineering", icon: Network },
   { label: "REST APIs", icon: Server },
-  { label: "Full-Stack Delivery", icon: Code2 },
-  { label: "Workflow Automation", icon: Workflow },
+  { label: "Full-Stack Development", icon: Code2 },
+  { label: "Microservices", icon: Workflow },
 ] as const satisfies readonly IconLabel[];
 
 export const companies = [
@@ -156,42 +156,43 @@ export const experience = [
   {
     company: "Afghan Telecom Corporation",
     role: "Software Developer",
-    period: "June 2025 - Present",
-    summary: "Building enterprise telecom systems and scalable backend services.",
+    period: "Jun 2025 - Present",
+    summary: "Developing and enhancing enterprise telecom systems and backend services.",
     bullets: [
-      "Develop and enhance the DSL Management System with Laravel, Livewire, React, REST APIs, and MySQL.",
-      "Automate telecom workflows for services, surveys, sales, stock, and operational reporting.",
-      "Design APIs and backend services, integrate enterprise modules, and improve performance and maintainability.",
-      "Collaborate with stakeholders, QA, MDF, and technical teams while maintaining workflow and deployment documentation.",
+      "Develop and enhance the DSL Management System (DMS) using Laravel, Livewire, React.js, RESTful APIs, and MySQL.",
+      "Automate telecom business workflows across customer services, technical surveys, sales, inventory, and operational reporting.",
+      "Design and integrate RESTful APIs and backend services, improving system performance, scalability, and maintainability.",
+      "Collaborate with stakeholders, QA, MDF, and technical teams while maintaining API, workflow, configuration, and deployment documentation.",
     ],
   },
   {
     company: "Ghazanfar Bank",
     role: "Full-Stack Developer",
-    period: "December 2024 - June 2025",
+    period: "Dec 2024 - Jun 2025",
     summary: "Led end-to-end development of the GB Suite banking operations platform.",
     bullets: [
-      "Digitized HR, finance, administration, and transportation workflows.",
-      "Built secure enterprise modules with Laravel, Livewire, FilamentPHP, Tailwind CSS, Alpine.js, and REST APIs.",
-      "Translated stakeholder requirements into automated approvals, reports, and maintainable system components.",
-      "Produced technical documentation, workflow diagrams, and deployment guidance for internal teams.",
+      "Led end-to-end development of GB Suite, an enterprise platform digitizing HR, Finance, Administration, and Transportation workflows.",
+      "Developed secure and maintainable enterprise modules using Laravel, Livewire, FilamentPHP, Tailwind CSS, Alpine.js, and RESTful APIs.",
+      "Translated business and stakeholder requirements into automated approval workflows, reporting modules, and operational processes.",
+      "Designed and implemented backend services, database-driven workflows, and reusable application components.",
+      "Prepared technical documentation, workflow diagrams, and deployment guides to support internal development and operational teams.",
     ],
   },
   {
     company: "Donya International Group",
     role: "Full-Stack Developer",
-    period: "May 2022 - December 2024",
+    period: "May 2022 - Dec 2024",
     summary: "Built and maintained CRM, sales, marketing, and enterprise web systems.",
     bullets: [
-      "Built CRM, sales operations, and enterprise applications with Laravel, JavaScript, and MySQL.",
+      "Built and maintained CRM, sales operations, and enterprise web applications with Laravel, JavaScript, and MySQL.",
       "Managed the marketing platform and multi-brand CRM email workflows.",
-      "Developed scalable REST APIs and improved backend reliability, performance, and maintainability.",
+      "Developed scalable REST APIs and optimized back-end services for reliability, performance, and maintainability.",
     ],
   },
   {
     company: "SaveZone Vehicle Tracking Company",
     role: "Junior Software Developer",
-    period: "September 2019 - April 2022",
+    period: "Sep 2019 - Apr 2022",
     summary: "Supported vehicle tracking software, infrastructure, and client operations.",
     bullets: [
       "Developed and maintained a Management Information System for vehicle tracking and monitoring.",
@@ -202,24 +203,39 @@ export const experience = [
 ] as const satisfies readonly Experience[];
 
 export const skillGroups = [
-  { title: "Languages", skills: ["PHP", "TypeScript", "JavaScript", "Python", "Java", "C#", "SQL"] },
-  { title: "Frameworks", skills: ["Laravel", "Livewire", "React", "Next.js", "Node.js", "NestJS", "Express.js", "Django", "FastAPI"] },
-  { title: "Data & Cloud", skills: ["MySQL", "PostgreSQL", "SQL Server", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes", "Linux"] },
-  { title: "Architecture", skills: ["Microservices", "REST APIs", "gRPC", "Event-Driven", "DDD", "Clean Architecture", "SOLID", "Design Patterns"] },
+  { title: "Languages", skills: ["Java", "Python", "TypeScript", "JavaScript", "PHP", "SQL"] },
+  { title: "Frameworks & Development", skills: ["Spring Boot", "Angular", "React", "FastAPI", "Django", "Laravel", "Node.js", "NestJS"] },
+  { title: "AI Engineering", skills: ["LLMs", "OpenAI API", "Hugging Face", "RAG", "LangChain", "Model Context Protocol (MCP)"] },
+  { title: "Architecture & Delivery", skills: ["Software Architecture", "System Design", "Microservices", "RESTful APIs", "Database Design", "System Integration", "Workflow Automation", "Performance Optimization", "Testing", "Agile/Scrum", "Technical Documentation"] },
 ] as const satisfies readonly SkillGroup[];
 
-export const education = {
-  degree: "Bachelor of Science in Computer Science",
-  institution: "Kabul Polytechnic University",
-  period: "June 2017 - July 2021",
-  description:
-    "Focused on software engineering, full-stack and mobile development, databases, networking, security, algorithms, and computer science foundations.",
-} as const;
+export const education = [
+  {
+    degree: "Master of Information Systems",
+    institution: "Kabul University",
+    period: "August 2026 - August 2028",
+    status: "In Progress",
+    description:
+      "Currently pursuing a Master's degree in Information Systems, with studies covering information systems, software engineering, artificial intelligence, machine learning, information security, software project management, and data management.",
+  },
+  {
+    degree: "Bachelor of Science in Computer Science",
+    institution: "Kabul Polytechnic University",
+    period: "June 2017 - July 2021",
+    description:
+      "Focused on software engineering, full-stack and mobile development, databases, networking, security, algorithms, and computer science foundations.",
+  },
+] as const;
 
 export const recognition = [
-  { title: "University Graduation", detail: "Bachelor of Computer Science, Kabul Polytechnic University", year: "2021" },
-  { title: "Imagine Career Program", detail: "International career-development and job-readiness program", year: "2024" },
-  { title: "Duolingo English Test", detail: "Score: 120 out of 160", year: "2026" },
+  { title: "Data Literacy", detail: "DataCamp · Credential ID DL0037347094769", year: "August 2026", credentialUrl: "https://www.datacamp.com/skill-verification/DL0037347094769" },
+  { title: "Claude Academy: Introduction to Model Context Protocol", detail: "Anthropic · Credential ID 6afe58f39a9fce883c889fc21ddd48f1", year: "August 2026", credentialUrl: "https://academy.claude.com/verify/6afe58f39a9fce883c889fc21ddd48f1" },
+  { title: "AI Foundations", detail: "OpenAI", year: "August 2026", credentialUrl: "https://academy.openai.com/home/certificate/k4bi9shzy5" },
+  { title: "Understanding Data Science", detail: "DataCamp · Credential ID #45,457,669", year: "January 2026" },
+  { title: "Understanding Data Engineering", detail: "DataCamp · Credential ID #45,281,204", year: "December 2025" },
+  { title: "AWS Concepts", detail: "DataCamp · Credential ID #36,722,602", year: "December 2024", credentialUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/course/742022bb074ef343e4d5df4e507c99ec42e54642" },
+  { title: "Understanding Cloud Computing", detail: "DataCamp · Credential ID #36,999,372", year: "November 2024", credentialUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/course/1418d19ccab27c96ddce54885c295448fffa8dce" },
+  { title: "Understanding Machine Learning", detail: "DataCamp · Credential ID #36,044,207", year: "November 2024", credentialUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/course/9143b4d408bc3348ee40abef2288dbddda4deff2" },
 ] as const satisfies readonly Recognition[];
 
 export const languages = ["Persian / Dari - Native", "English - Fluent (C2)", "Pashto - Fluent", "Urdu - Fluent"] as const;

@@ -55,4 +55,5 @@ export interface Recognition {
   title: string;
   detail: string;
   year: string;
+  credentialUrl?: string;
 }
