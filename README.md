@@ -1,6 +1,6 @@
 # Jafar Madadi — Portfolio
 
-** Full-Stack Software Developer | AI Engineer **
+**Full-Stack Software Developer | AI Engineer**
 
 Production portfolio for **Jafar Madadi**, a Senior Software Engineer and Software Architect focused on designing and building **enterprise platforms, scalable backend systems, APIs, microservices, workflow automation, and modern full-stack applications**.
 
