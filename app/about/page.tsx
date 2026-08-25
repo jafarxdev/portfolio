@@ -28,10 +28,10 @@ export default function AboutPage() {
             </p>
           </div>
           <figure className="interactive-card relative overflow-hidden rounded-2xl border border-border bg-background p-2 shadow-xl">
-            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-muted">
               <Image
-                src={publicAssetPath("/jafar-madadi-at-work.jpg")}
-                alt="Jafar Madadi working at a computer"
+                src={publicAssetPath("/jafar.jpg")}
+                alt="Jafar Madadi at his desk"
                 fill
                 quality={85}
                 sizes="(max-width: 1024px) 100vw, 40vw"
