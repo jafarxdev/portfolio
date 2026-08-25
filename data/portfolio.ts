@@ -229,7 +229,7 @@ export const education = [
 
 export const recognition: Recognition[] = [
   { title: "Data Literacy", detail: "DataCamp · Credential ID DL0037347094769", year: "August 2026", credentialUrl: "https://www.datacamp.com/skill-verification/DL0037347094769" },
-  { title: "Claude Academy: Introduction to Model Context Protocol", detail: "Anthropic · Credential ID 6afe58f39a9fce883c889fc21ddd48f1", year: "August 2026", credentialUrl: "https://academy.claude.com/verify/6afe58f39a9fce883c889fc21ddd48f1" },
+  { title: "Introduction to Model Context Protocol", detail: "Anthropic · Credential ID 6afe58f39a9fce883c889fc21ddd48f1", year: "August 2026", credentialUrl: "https://academy.claude.com/verify/6afe58f39a9fce883c889fc21ddd48f1" },
   { title: "AI Foundations", detail: "OpenAI", year: "August 2026", credentialUrl: "https://academy.openai.com/home/certificate/k4bi9shzy5" },
   { title: "Understanding Data Science", detail: "DataCamp · Credential ID #45,457,669", year: "January 2026", credentialUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/course/3608c194c03313d2c2c651ee74f0037357b0f375" },
   { title: "Understanding Data Engineering", detail: "DataCamp · Credential ID #45,281,204", year: "December 2025", credentialUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/course/a1b1384cbba5457b058ac96faad4b41f88e8021a" },
