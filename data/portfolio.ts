@@ -204,7 +204,7 @@ export const experience = [
 
 export const skillGroups = [
   { title: "Languages", skills: ["Java", "Python", "TypeScript", "JavaScript", "PHP", "SQL"] },
-  { title: "Frameworks & Development", skills: ["Spring Boot", "Angular", "React", "FastAPI", "Django", "Laravel", "Livewire", "Node.js", "NestJS"] },
+  { title: "Frameworks & Development", skills: ["Spring Boot", "Angular", "React", "Next.js", "FastAPI", "Django", "Laravel", "Livewire", "Node.js", "NestJS"] },
   { title: "AI Engineering", skills: ["LLMs", "OpenAI API", "Hugging Face", "RAG", "LangChain", "Model Context Protocol (MCP)", "Prompt Engineering", "Embeddings", "Vector Databases", "AI Agents", "LLM Evaluation"] },
   { title: "Architecture & Delivery", skills: ["Software Architecture", "System Design", "Microservices", "RESTful APIs", "Database Design", "System Integration", "Workflow Automation", "Performance Optimization", "Testing", "Agile/Scrum", "Technical Documentation"] },
 ] as const satisfies readonly SkillGroup[];
