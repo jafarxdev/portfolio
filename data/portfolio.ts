@@ -46,7 +46,7 @@ export const profile = {
   location: "Kabul, Afghanistan",
   availability: "Open to relocation and remote collaboration",
   linkedin: "https://www.linkedin.com/in/jafar-madadi",
-  github: "https://github.com/madadi-dev",
+  github: "https://github.com/jafarxdev",
   youtube: "https://www.youtube.com/@JafarExplains",
 } as const;
 
