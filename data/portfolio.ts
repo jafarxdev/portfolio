@@ -265,4 +265,4 @@ export const recognition: Recognition[] = [
 
 export const languages = ["Persian / Dari - Native", "English - Fluent (C2)", "Pashto - Fluent", "Urdu - Fluent"] as const;
 
-export const hobbies = ["Volleyball", "Running", "Mountaineering", "Biking", "Playing chess", "Listening to podcasts", "Reading books", "Watching YouTube content", "Continuous learning"] as const;
+export const hobbies = ["Volleyball", "Running", "Mountaineering", "Playing chess", "Listening to podcasts", "Watching YouTube content", "Continuous learning"] as const;
