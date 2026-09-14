@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Award, ExternalLink, FileText, GraduationCap, Languages, MapPin, PlaySquare } from "lucide-react";
+import { Activity, Award, ExternalLink, FileText, GraduationCap, Languages, MapPin, PlaySquare } from "lucide-react";
 import Image from "next/image";
 import { SectionHeading } from "@/components/section-heading";
-import { education, languages, profile, recognition, skillGroups } from "@/data/portfolio";
+import { education, hobbies, languages, learningPlatforms, profile, recognition, skillGroups } from "@/data/portfolio";
 import { publicAssetPath } from "@/lib/public-path";
 import { resolveSiteUrl } from "@/lib/site";
 
@@ -85,14 +85,35 @@ export default function AboutPage() {
                   <p className="mt-4 text-sm leading-6 text-muted-foreground">{item.description}</p>
                 </div>
               ))}
+              <div className="mt-8 border-t border-border pt-6">
+                <h3 className="font-semibold">Continuous learning</h3>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">Ongoing professional learning through leading technology and education platforms.</p>
+                <ul className="mt-4 flex flex-wrap gap-2" aria-label="Continuous learning platforms">
+                  {learningPlatforms.map((platform) => (
+                    <li key={platform.name}>
+                      <a href={platform.website} target="_blank" rel="noopener noreferrer" className="tech-pill inline-flex items-center gap-1 hover:bg-blue-500/20">
+                        {platform.name} <ExternalLink aria-hidden="true" size={12} />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </article>
-          <article className="soft-card">
-            <div className="mb-5 flex items-center gap-3"><Languages aria-hidden="true" className="text-purple-500" /><h2 className="text-xl font-semibold">Languages</h2></div>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              {languages.map((language) => <li key={language}>{language}</li>)}
-            </ul>
-          </article>
+          <div className="grid content-start gap-7">
+            <article className="soft-card">
+              <div className="mb-5 flex items-center gap-3"><Languages aria-hidden="true" className="text-purple-500" /><h2 className="text-xl font-semibold">Languages</h2></div>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                {languages.map((language) => <li key={language}>{language}</li>)}
+              </ul>
+            </article>
+            <article className="soft-card">
+              <div className="mb-5 flex items-center gap-3"><Activity aria-hidden="true" className="text-blue-500" /><h2 className="text-xl font-semibold">Hobbies</h2></div>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                {hobbies.map((hobby) => <li key={hobby}>{hobby}</li>)}
+              </ul>
+            </article>
+          </div>
         </div>
 
         <div className="mt-20">

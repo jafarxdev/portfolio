@@ -81,6 +81,11 @@ export interface Education {
   };
 }
 
+export interface LearningPlatform {
+  name: string;
+  website: string;
+}
+
 export interface Recognition {
   title: string;
   detail: string;

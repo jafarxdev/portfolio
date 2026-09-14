@@ -13,6 +13,7 @@ import type {
   Education,
   Experience,
   IconLabel,
+  LearningPlatform,
   NavigationItem,
   Project,
   Recognition,
@@ -53,9 +54,9 @@ export const profile = {
 } as const;
 
 export const stats = [
-  { value: "5+", unit: "Years", label: "Software Engineering", accent: "blue" },
-  { value: "4", unit: "Industries", label: "Enterprise Delivery", accent: "purple" },
-  { value: "1+", unit: "Year", label: "AI Engineer", accent: "ai" },
+  { value: "6", unit: "Years", label: "Software Engineering", accent: "blue" },
+  { value: "4", unit: "Industries", label: "Industry Experience", accent: "purple" },
+  { value: "1", unit: "Year", label: "Agentic AI Engineering", accent: "ai" },
 ] as const satisfies readonly Stat[];
 
 export const keyAreas = [
@@ -243,6 +244,16 @@ export const education: readonly Education[] = [
   },
 ];
 
+export const learningPlatforms: readonly LearningPlatform[] = [
+  { name: "LinkedIn Learning", website: "https://www.linkedin.com/learning/" },
+  { name: "Udemy", website: "https://www.udemy.com/" },
+  { name: "DataCamp", website: "https://www.datacamp.com/" },
+  { name: "YouTube", website: "https://www.youtube.com/" },
+  { name: "OpenAI Academy", website: "https://academy.openai.com/" },
+  { name: "Claude Academy", website: "https://academy.claude.com/" },
+  { name: "Imagine Learning Foundation", website: "https://www.imaginelearningfoundation.org/" },
+];
+
 export const recognition: Recognition[] = [
   { title: "AI Fundamentals Certificate", detail: "DataCamp · Credential ID AIF0028643574261", year: "September 2026", credentialUrl: "https://www.datacamp.com/skill-verification/AIF0028643574261" },
   { title: "Introduction to Model Context Protocol", detail: "Anthropic · Credential ID 6afe58f39a9fce883c889fc21ddd48f1", year: "August 2026", credentialUrl: "https://academy.claude.com/verify/6afe58f39a9fce883c889fc21ddd48f1" },
@@ -253,3 +264,5 @@ export const recognition: Recognition[] = [
 ];
 
 export const languages = ["Persian / Dari - Native", "English - Fluent (C2)", "Pashto - Fluent", "Urdu - Fluent"] as const;
+
+export const hobbies = ["Volleyball", "Running", "Mountaineering", "Biking", "Playing chess", "Listening to podcasts", "Reading books", "Watching YouTube content", "Continuous learning"] as const;
