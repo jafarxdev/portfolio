@@ -9,6 +9,8 @@ import {
   Workflow,
 } from "lucide-react";
 import type {
+  Company,
+  Education,
   Experience,
   IconLabel,
   NavigationItem,
@@ -63,12 +65,13 @@ export const keyAreas = [
   { label: "Microservices", icon: Workflow },
 ] as const satisfies readonly IconLabel[];
 
-export const companies = [
-  "Afghan Telecom",
-  "Ghazanfar Bank",
-  "Donya International Group",
-  "SaveZone",
-] as const;
+export const companies: readonly Company[] = [
+  { name: "Afghan Telecom", website: "https://www.afghantelecom.af/en/", logo: { src: "/employer-afghan-telecom.png", width: 192, height: 89 } },
+  { name: "Salaam (Afghan Telecom brand)", website: "https://www.salaam.af/en", logo: { src: "/salaam-logo.png", width: 300, height: 212 } },
+  { name: "Ghazanfar Bank", website: "https://www.ghazanfarbank.com/", logo: { src: "/employer-ghazanfar-bank.png", width: 138, height: 177 } },
+  { name: "Donya International Group", website: "https://dig.af/", logo: { src: "/employer-donya-international-group.png", width: 259, height: 60 } },
+  { name: "SaveZone", website: "http://safezone.af/", logo: { src: "/employer-savezone.png", width: 350, height: 120 } },
+];
 
 export const projects = [
   {
@@ -153,16 +156,18 @@ export const specializations = [
   },
 ] as const satisfies readonly Specialization[];
 
-export const experience = [
+export const experience: readonly Experience[] = [
   {
     company: "Afghan Telecom Corporation",
-    role: "Software Developer",
+    role: "Software Engineer",
     period: "Jun 2025 - Present",
-    summary: "Developing and enhancing enterprise telecom systems and backend services.",
+    summary: "Developing enterprise telecom systems, backend services, and billing-management integrations.",
+    website: "https://www.afghantelecom.af/en/",
+    logo: { src: "/employer-afghan-telecom.png", width: 192, height: 89 },
     bullets: [
       "Develop and enhance the DSL Management System (DMS) using Laravel, Livewire, React.js, RESTful APIs, and MySQL.",
-      "Automate telecom business workflows across customer services, technical surveys, sales, inventory, and operational reporting.",
-      "Design and integrate RESTful APIs and backend services, improving system performance, scalability, and maintainability.",
+      "Automate telecom business workflows across customer services, technical surveys, sales, inventory, billing management, and operational reporting.",
+      "Design and integrate RESTful APIs, backend services, and billing-management workflows, improving system performance, scalability, and maintainability.",
       "Collaborate with stakeholders, QA, MDF, and technical teams while maintaining API, workflow, configuration, and deployment documentation.",
     ],
   },
@@ -171,6 +176,8 @@ export const experience = [
     role: "Full-Stack Developer",
     period: "Dec 2024 - Jun 2025",
     summary: "Led end-to-end development of the GB Suite banking operations platform.",
+    website: "https://www.ghazanfarbank.com/",
+    logo: { src: "/employer-ghazanfar-bank.png", width: 138, height: 177 },
     bullets: [
       "Led end-to-end development of GB Suite, an enterprise platform digitizing HR, Finance, Administration, and Transportation workflows.",
       "Developed secure and maintainable enterprise modules using Laravel, Livewire, FilamentPHP, Tailwind CSS, Alpine.js, and RESTful APIs.",
@@ -184,6 +191,8 @@ export const experience = [
     role: "Full-Stack Developer",
     period: "May 2022 - Dec 2024",
     summary: "Built and maintained CRM, sales, marketing, and enterprise web systems.",
+    website: "https://dig.af/",
+    logo: { src: "/employer-donya-international-group.png", width: 259, height: 60 },
     bullets: [
       "Built and maintained CRM, sales operations, and enterprise web applications with Laravel, JavaScript, and MySQL.",
       "Managed the marketing platform and multi-brand CRM email workflows.",
@@ -195,13 +204,15 @@ export const experience = [
     role: "Junior Software Developer",
     period: "Sep 2019 - Apr 2022",
     summary: "Supported vehicle tracking software, infrastructure, and client operations.",
+    website: "http://safezone.af/",
+    logo: { src: "/employer-savezone.png", width: 350, height: 120 },
     bullets: [
       "Developed and maintained a Management Information System for vehicle tracking and monitoring.",
       "Handled server administration, deployment, troubleshooting, maintenance, and technical support.",
       "Supported government clients, including the Ministry of Interior and Ministry of Defense.",
     ],
   },
-] as const satisfies readonly Experience[];
+];
 
 export const skillGroups = [
   { title: "Languages", skills: ["Java", "Python", "TypeScript", "JavaScript", "PHP", "SQL"] },
@@ -210,12 +221,14 @@ export const skillGroups = [
   { title: "Architecture & Delivery", skills: ["Software Architecture", "System Design", "Microservices", "RESTful APIs", "Database Design", "System Integration", "Workflow Automation", "Performance Optimization", "Testing", "Agile/Scrum", "Technical Documentation"] },
 ] as const satisfies readonly SkillGroup[];
 
-export const education = [
+export const education: readonly Education[] = [
   {
     degree: "Master of Science (MSc), Information Systems",
     institution: "Kabul University",
     period: "August 2026 - August 2028",
     status: "In Progress",
+    website: "https://ku.edu.af/en",
+    logo: { src: "/kabul-university-logo.png", width: 3150, height: 3150 },
     description:
       "Currently pursuing a Master's degree in Information Systems, with studies covering information systems, software engineering, artificial intelligence, machine learning, information security, software project management, and data management.",
   },
@@ -223,10 +236,12 @@ export const education = [
     degree: "Bachelor of Science in Computer Science",
     institution: "Kabul Polytechnic University",
     period: "June 2017 - July 2021",
+    website: "https://kpu.edu.af/en",
+    logo: { src: "/kabul-polytechnic-university-logo.png", width: 618, height: 599 },
     description:
       "Focused on software engineering, full-stack and mobile development, databases, networking, security, algorithms, and computer science foundations.",
   },
-] as const;
+];
 
 export const recognition: Recognition[] = [
   { title: "AI Fundamentals Certificate", detail: "DataCamp · Credential ID AIF0028643574261", year: "September 2026", credentialUrl: "https://www.datacamp.com/skill-verification/AIF0028643574261" },

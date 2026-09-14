@@ -16,7 +16,7 @@
     --content-width: 75rem;
     --reading-width: 42rem;
     --page-gutter: clamp(1rem, 3vw, 2rem);
-    --section-space: clamp(4rem, 8vw, 7rem);
+    --section-space: clamp(2.5rem, 5vw, 4rem);
     --radius-control: 0.375rem;
     --radius-card: 0.75rem;
     --shadow-card: 0 12px 30px -22px rgb(15 23 42 / 0.35);
@@ -376,6 +376,36 @@
 
   .key-area {
     @apply flex min-h-11 items-center gap-2 rounded-md border border-border/70 bg-background/70 px-4 py-2;
+  }
+
+  .carousel-button {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-blue-500/10 hover:text-blue-600 dark:hover:text-blue-400;
+  }
+
+  .company-carousel {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .company-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .company-slide {
+    @apply flex h-20 min-w-40 items-center justify-center px-3;
+    transition:
+      transform 300ms var(--ease-standard),
+      opacity 300ms var(--ease-standard);
+  }
+
+  .company-slide:is(:hover, :focus-visible) {
+    opacity: 0.75;
+    transform: translateY(-0.125rem);
   }
 
   .soft-card,

@@ -44,11 +44,41 @@ export interface Experience {
   period: string;
   summary: string;
   bullets: readonly string[];
+  website?: string;
+  logo?: {
+    src: string;
+    width: number;
+    height: number;
+  };
+}
+
+export interface Company {
+  name: string;
+  website?: string;
+  logo?: {
+    src: string;
+    width: number;
+    height: number;
+  };
 }
 
 export interface SkillGroup {
   title: string;
   skills: readonly string[];
+}
+
+export interface Education {
+  degree: string;
+  institution: string;
+  period: string;
+  status?: string;
+  description: string;
+  website?: string;
+  logo?: {
+    src: string;
+    width: number;
+    height: number;
+  };
 }
 
 export interface Recognition {

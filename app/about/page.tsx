@@ -20,10 +20,10 @@ export default function AboutPage() {
           <div>
             <div className="badge"><MapPin aria-hidden="true" size={14} /> {profile.location}</div>
             <h1 className="mt-7 max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">Engineering systems that make <span className="gradient-text">complex work feel clear.</span></h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
+            <p className="mt-6 max-w-3xl font-sans text-lg leading-8 text-muted-foreground md:text-xl">
               I am a Software Developer and AI Software Engineer with 5+ years of experience designing, developing, and maintaining enterprise-grade software systems across telecommunications, banking, and business operations.
             </p>
-            <p className="mt-4 max-w-3xl leading-7 text-muted-foreground">
+            <p className="mt-5 max-w-3xl font-sans text-base leading-7 text-muted-foreground md:text-lg md:leading-8">
               My work spans software architecture, backend engineering, full-stack development, database design, RESTful APIs, microservices, testing, performance optimization, and technical documentation. I am expanding my expertise in AI-assisted development and AI application integration while collaborating with cross-functional teams to deliver scalable, maintainable, business-focused software.
             </p>
           </div>
@@ -68,9 +68,20 @@ export default function AboutPage() {
             <div className="space-y-6">
               {education.map((item, index) => (
                 <div key={`${item.institution}-${item.degree}`} className={index > 0 ? "border-t border-border pt-6" : ""}>
-                  <h3 className="font-semibold">{item.degree}</h3>
-                  <p className="mt-1 text-sm font-medium text-blue-600 dark:text-blue-400">{item.institution} · {item.period}</p>
-                  {"status" in item && <p className="mt-1 text-sm text-muted-foreground">Status: {item.status}</p>}
+                  <div className="flex items-start gap-3">
+                    {item.logo && item.website && (
+                      <a href={item.website} target="_blank" rel="noopener noreferrer" className="flex h-14 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-white p-1.5" aria-label={`Visit ${item.institution} website`}>
+                        <Image src={publicAssetPath(item.logo.src)} alt="" width={item.logo.width} height={item.logo.height} className="max-h-full max-w-full object-contain" />
+                      </a>
+                    )}
+                    <div>
+                      <h3 className="font-semibold">{item.degree}</h3>
+                      <p className="mt-1 text-sm font-medium text-blue-600 dark:text-blue-400">
+                        {item.website ? <a href={item.website} target="_blank" rel="noopener noreferrer" className="hover:underline">{item.institution}</a> : item.institution} · {item.period}
+                      </p>
+                      {item.status && <p className="mt-1 text-sm text-muted-foreground">Status: {item.status}</p>}
+                    </div>
+                  </div>
                   <p className="mt-4 text-sm leading-6 text-muted-foreground">{item.description}</p>
                 </div>
               ))}

@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCircle2, FileText, Sparkles, TrendingUp } from "lucide-react";
 import Link from "next/link";
+import { EmployerCarousel } from "@/components/employer-carousel";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
 import { companies, keyAreas, profile, projects, specializations, stats } from "@/data/portfolio";
@@ -25,7 +26,7 @@ const architecturePrinciples = [
 export default function HomePage() {
   return (
     <>
-      <section className="site-container flex min-h-screen items-center py-24">
+      <section className="site-container py-24">
         <div className="max-w-4xl space-y-8">
           <div className="badge"><Sparkles aria-hidden="true" size={14} /> {profile.title}</div>
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">
@@ -33,7 +34,7 @@ export default function HomePage() {
             <span className="gradient-text">intelligent AI solutions</span>
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-            I&apos;m Jafar Madadi, a Software Developer and AI Software Engineer with 5+ years of experience building enterprise software across telecommunications, banking, and business operations. I specialize in full-stack development, backend engineering, system integration, workflow automation, and AI application integration.
+            I&apos;m Jafar Madadi, a Software & AI Engineer with 5+ years of experience building enterprise software for telecommunications, banking, and business operations. I develop full-stack platforms, scalable backend services, and system integrations, including telecom billing-management workflows, while applying AI to automate and improve real-world business processes.
           </p>
 
           <div className="grid max-w-2xl grid-cols-2 gap-4 pt-2 sm:grid-cols-3">
@@ -80,10 +81,7 @@ export default function HomePage() {
             <Link href="/contact" className="text-button">Contact me</Link>
           </div>
 
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-border/60 pt-8 text-sm text-muted-foreground">
-            <span className="uppercase tracking-wider">Experience across</span>
-            {companies.map((company) => <span key={company} className="font-semibold text-foreground/70">{company}</span>)}
-          </div>
+          <EmployerCarousel companies={companies} />
         </div>
       </section>
 
