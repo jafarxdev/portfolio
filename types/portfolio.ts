@@ -1,6 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 
-export type Accent = "blue" | "purple";
+export type Accent = "ai" | "blue" | "purple";
 
 export interface NavigationItem {
   href: `/${string}` | "/";

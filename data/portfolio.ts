@@ -23,7 +23,7 @@ export const siteConfig = {
   name: "Jafar Madadi",
   shortName: "JM",
   url: "https://jafar-madadi-portfolio.jafar-madadi2026.chatgpt.site/",
-  title: "Jafar Madadi | Software Developer & AI Software Engineer",
+  title: "Jafar Madadi | Software & AI Engineer",
   description:
     "Software Developer and AI Software Engineer with 5+ years of experience building enterprise software, scalable APIs, microservices, and AI-integrated applications.",
   locale: "en_US",
@@ -39,8 +39,8 @@ export const navigation = [
 export const profile = {
   name: siteConfig.name,
   initials: ["J", "M"] as const,
-  title: "Software Developer & AI Software Engineer",
-  tagline: "software developer & AI engineer",
+  title: "Software & AI Engineer",
+  tagline: "Software & AI Engineer",
   email: "jafar.madadi2026@gmail.com",
   phone: "+93 744 646 063",
   location: "Kabul, Afghanistan",
@@ -53,6 +53,7 @@ export const profile = {
 export const stats = [
   { value: "5+", unit: "Years", label: "Software Engineering", accent: "blue" },
   { value: "4", unit: "Industries", label: "Enterprise Delivery", accent: "purple" },
+  { value: "1+", unit: "Year", label: "AI Engineer", accent: "ai" },
 ] as const satisfies readonly Stat[];
 
 export const keyAreas = [

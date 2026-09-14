@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle2, FileText, Sparkles, TrendingUp } from "lucide
 import Link from "next/link";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
-import { companies, keyAreas, projects, specializations, stats } from "@/data/portfolio";
+import { companies, keyAreas, profile, projects, specializations, stats } from "@/data/portfolio";
 import { publicAssetPath } from "@/lib/public-path";
 
 const architecturePrinciples = [
@@ -27,7 +27,7 @@ export default function HomePage() {
     <>
       <section className="site-container flex min-h-screen items-center py-24">
         <div className="max-w-4xl space-y-8">
-          <div className="badge"><Sparkles aria-hidden="true" size={14} /> Software Developer & AI Software Engineer</div>
+          <div className="badge"><Sparkles aria-hidden="true" size={14} /> {profile.title}</div>
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">
             Building scalable software and{" "}
             <span className="gradient-text">intelligent AI solutions</span>
@@ -36,16 +36,28 @@ export default function HomePage() {
             I&apos;m Jafar Madadi, a Software Developer and AI Software Engineer with 5+ years of experience building enterprise software across telecommunications, banking, and business operations. I specialize in full-stack development, backend engineering, system integration, workflow automation, and AI application integration.
           </p>
 
-          <div className="grid max-w-md grid-cols-2 gap-4 pt-2">
+          <div className="grid max-w-2xl grid-cols-2 gap-4 pt-2 sm:grid-cols-3">
             {stats.map((stat) => {
               const isBlue = stat.accent === "blue";
+              const isPurple = stat.accent === "purple";
+              const cardClass = isBlue ? "stat-card-blue" : isPurple ? "stat-card-purple" : "stat-card-ai";
+              const accentClass = isBlue
+                ? "text-blue-500"
+                : isPurple
+                  ? "text-purple-500"
+                  : "text-cyan-500";
+              const valueClass = isBlue
+                ? "text-blue-600 dark:text-blue-400"
+                : isPurple
+                  ? "text-purple-600 dark:text-purple-400"
+                  : "stat-value-ai";
               return (
-                <div key={stat.label} className={`stat-card ${isBlue ? "stat-card-blue" : "stat-card-purple"}`}>
+                <div key={stat.label} className={`stat-card ${cardClass}`}>
                   <div className="flex items-center justify-between">
-                    <span className={isBlue ? "text-blue-500" : "text-purple-500"} aria-hidden="true">●</span>
+                    <span className={accentClass} aria-hidden="true">●</span>
                     <TrendingUp aria-hidden="true" size={16} className="text-muted-foreground" />
                   </div>
-                  <p className={`mt-2 text-3xl font-bold ${isBlue ? "text-blue-600 dark:text-blue-400" : "text-purple-600 dark:text-purple-400"}`}>{stat.value}</p>
+                  <p className={`mt-2 text-3xl font-bold ${valueClass}`}>{stat.value}</p>
                   <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{stat.unit}</p>
                   <p className="mt-1 text-xs text-muted-foreground">{stat.label}</p>
                 </div>

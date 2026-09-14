@@ -11,6 +11,7 @@
     --border: 0 0% 89.8%;
     --accent-blue: 221 83% 53%;
     --accent-purple: 271 81% 56%;
+    --accent-ai: 188 86% 45%;
 
     --content-width: 75rem;
     --reading-width: 42rem;
@@ -349,6 +350,30 @@
     @apply border-purple-500/20 bg-purple-500/10;
   }
 
+  .stat-card-ai {
+    border-color: rgb(6 182 212 / 0.3);
+    background:
+      radial-gradient(circle at 100% 0%, rgb(168 85 247 / 0.18), transparent 52%),
+      linear-gradient(135deg, rgb(6 182 212 / 0.13), rgb(99 102 241 / 0.12));
+  }
+
+  .stat-value-ai {
+    background: linear-gradient(90deg, rgb(8 145 178), rgb(124 58 237));
+    background-clip: text;
+    color: transparent;
+  }
+
+  .dark .stat-card-ai {
+    border-color: rgb(34 211 238 / 0.35);
+    background:
+      radial-gradient(circle at 100% 0%, rgb(192 132 252 / 0.2), transparent 52%),
+      linear-gradient(135deg, rgb(6 182 212 / 0.18), rgb(99 102 241 / 0.18));
+  }
+
+  .dark .stat-value-ai {
+    background-image: linear-gradient(90deg, rgb(34 211 238), rgb(192 132 252));
+  }
+
   .key-area {
     @apply flex min-h-11 items-center gap-2 rounded-md border border-border/70 bg-background/70 px-4 py-2;
   }
@@ -368,6 +393,10 @@
 
   .stat-card-purple {
     --card-hover-accent: var(--accent-purple);
+  }
+
+  .stat-card-ai {
+    --card-hover-accent: var(--accent-ai);
   }
 
   .soft-card:hover,
