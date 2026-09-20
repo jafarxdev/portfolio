@@ -54,9 +54,9 @@ export const profile = {
 } as const;
 
 export const stats = [
-  { value: "6", unit: "Years", label: "Software Engineering", accent: "blue" },
+  { value: "6", unit: "Years", label: "Software Development", accent: "blue" },
   { value: "4", unit: "Industries", label: "Industry Experience", accent: "purple" },
-  { value: "1", unit: "Year", label: "Agentic AI Engineering", accent: "ai" },
+  { value: "2", unit: "Year", label: "AI Engineering", accent: "ai" },
 ] as const satisfies readonly Stat[];
 
 export const keyAreas = [
